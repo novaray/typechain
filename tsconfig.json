@@ -2,9 +2,12 @@
   "include": ["src"],
   "compilerOptions": {
     "outDir": "build",
+    "esModuleInterop": true,
     "target": "ES6",
     // 자바스크립트의 어떤 버전이 그 환경에서 사용되는지를 적는다. DOM은 브라우저 환경이다.
-    // lib에 선언한 걸 기반으로 타입스크립트에서 인텔리센스를 추천해준다.
-    "lib": ["ES6", "DOM"]
+    // lib에 선언한 걸 기반으로 타입스크립트에서 인텔리센스를 추천해준다. 기본 값은 Node.js 환경이다.
+    "lib": ["ES6"],
+    "strict": true,
+    "module": "CommonJS"
   }
 }
